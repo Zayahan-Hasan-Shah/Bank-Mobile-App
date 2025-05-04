@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
 
-class CustomTextField  extends StatelessWidget{
+class CustomTextField extends StatelessWidget {
   final TextEditingController controller;
   final bool obsText;
   final VoidCallback? toggle;
   final String? Function(String?)? validator;
+  final Widget? suffixIcon;
 
   const CustomTextField({
     Key? key,
     required this.controller,
-     this.obsText = false,
+    this.obsText = false,
     this.toggle,
     this.validator,
-  });
+    this.suffixIcon,
+  }) : super(key: key);
 
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return TextFormField(
       controller: controller,
       obscureText: obsText,
@@ -30,17 +32,17 @@ class CustomTextField  extends StatelessWidget{
         focusedBorder: const UnderlineInputBorder(
           borderSide: BorderSide(color: Colors.grey),
         ),
-        suffixIcon: toggle != null
-            ? IconButton(
-                icon: Icon(
-                  obsText ? Icons.visibility_off : Icons.visibility,
-                  color: Colors.grey,
-                ),
-                onPressed: toggle,
-              )
-            : null,
+        suffixIcon: suffixIcon ??
+            (toggle != null
+                ? IconButton(
+                    icon: Icon(
+                      obsText ? Icons.visibility_off : Icons.visibility,
+                      color: Colors.grey,
+                    ),
+                    onPressed: toggle,
+                  )
+                : null),
       ),
     );
   }
-
 }

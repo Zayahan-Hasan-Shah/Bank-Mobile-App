@@ -45,4 +45,5 @@ class AppValidations {
     }
     return null;
   }
+
 }

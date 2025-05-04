@@ -28,3 +28,12 @@ const line4 = 'Provide the quality of the financial system with\nfree money tran
 const line5 = 'Provides the 100% freedom of the financial management with lowest fees on Interantional transactions';
 const line6 = 'Provides the 100% freedom of the financial managment with Multiple Payment Options\nfor local & International Payments';
 const line7 = 'Pay monthly or daily bills at home in a site of TransferMe';
+
+
+/// signup and login screen
+const signUpTitle = 'Sign Up';
+const emailAddressLabel = 'Email Address';
+const passwordLabel = 'Password';
+const confirmPasswordLabel = 'Confirm Password';
+const ahac = 'Already have an account?';
+const loginTitle = 'Login'; 

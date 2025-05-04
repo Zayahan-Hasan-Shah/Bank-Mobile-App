@@ -6,4 +6,6 @@ class ImageAssets {
   static const String itImage = 'assets/images/it.png';
   static const String mccImage = 'assets/images/mcc.png';
   static const String bpmeImage = 'assets/images/bpme.png';
+  static const String googleSignupImage = 'assets/images/google.png';
+  static const String facebookImage = 'assets/images/facebook.png';
 }

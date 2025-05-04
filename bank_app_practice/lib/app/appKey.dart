@@ -1,4 +1,4 @@
-//Keys
+// Keys
 
 const tokenKey = 'tokenKey';
 const userIdKey = 'userId';
