@@ -38,3 +38,7 @@ const confirmPasswordLabel = 'Confirm Password';
 const ahac = 'Already have an account?';
 const loginTitle = 'Login'; 
 const dhaa = 'Don\'t have an account?';
+
+
+/// profile updates
+const profileTitle = 'Profile';

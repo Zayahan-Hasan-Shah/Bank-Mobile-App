@@ -189,6 +189,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           onTap: () {
             if (formKey.currentState!.validate()) {
               print("Form is valid. Proceed with signup.");
+              pushNamed(AppRoutes.profileUpdateScreen);
             } else {
               print("Form is invalid. Show errors.");
             }

@@ -1,4 +1,5 @@
 import 'package:bank_app_practice/views/auth/loginScreen.dart';
+import 'package:bank_app_practice/views/auth/profileUpdateScreen.dart';
 import 'package:bank_app_practice/views/auth/signupScreen.dart';
 import 'package:bank_app_practice/views/onBoarding/onBoarding.dart';
 import 'package:bank_app_practice/views/onBoarding/welcome.dart';
@@ -12,6 +13,7 @@ class AppRoutes {
   static const loginScreen = '/loginscreen';
   static const onBoardingScreen = '/onboardingscreen';
   static const signupScreen = '/signupscreen';
+  static const profileUpdateScreen = '/profileupdatescreen';
 
   static Map<String, Widget Function(BuildContext _)> routes = {
     mainRoute : (_) => const SplashScreen(),
@@ -19,6 +21,6 @@ class AppRoutes {
     onBoardingScreen : (_) => const OnBoarding(),
     signupScreen : (_) => SignUpScreen(),
     loginScreen : (_) => LoginScreen(),
-    
+    profileUpdateScreen : (_) => ProfileUpdateScreen(),
   };
 }
