@@ -1,6 +1,8 @@
 import 'package:bank_app_practice/core/colors.dart';
 import 'package:bank_app_practice/core/constants.dart';
 import 'package:bank_app_practice/core/images.dart';
+import 'package:bank_app_practice/navigation/navigationHelper.dart';
+import 'package:bank_app_practice/routes/appRoutes.dart';
 import 'package:bank_app_practice/utils/customButton.dart';
 import 'package:bank_app_practice/utils/customTextField.dart';
 import 'package:bank_app_practice/utils/titleText.dart';
@@ -298,7 +300,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 style: TextStyle(
                   color: ColorsPallete.titleColor,
                 ),
-                recognizer: TapGestureRecognizer()..onTap = () {},
+                recognizer: TapGestureRecognizer()
+                  ..onTap = () {
+                    pushNamedReplace(AppRoutes.loginScreen);
+                  },
               ),
             ]),
       ),

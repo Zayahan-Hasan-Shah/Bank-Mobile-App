@@ -1,3 +1,4 @@
+import 'package:bank_app_practice/views/auth/loginScreen.dart';
 import 'package:bank_app_practice/views/auth/signupScreen.dart';
 import 'package:bank_app_practice/views/onBoarding/onBoarding.dart';
 import 'package:bank_app_practice/views/onBoarding/welcome.dart';
@@ -17,6 +18,7 @@ class AppRoutes {
     welcomScreen : (_) => const Welcome(),
     onBoardingScreen : (_) => const OnBoarding(),
     signupScreen : (_) => SignUpScreen(),
+    loginScreen : (_) => LoginScreen(),
     
   };
 }
