@@ -42,3 +42,7 @@ const dhaa = 'Don\'t have an account?';
 
 /// profile updates
 const profileTitle = 'Profile';
+const psuyp = 'Please set up your profile';
+const fn = 'First Name';
+const ln = 'Last Name';
+const s = 'Set';

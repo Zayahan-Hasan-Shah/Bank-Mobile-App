@@ -10,8 +10,7 @@ class AppValidations {
     return null;
   }
 
-
-  /// Password validation check 
+  /// Password validation check
   static String? passwordValidation(String? value) {
     if (value == null || value.trim().isEmpty) {
       return 'Password is required';
@@ -46,4 +45,14 @@ class AppValidations {
     return null;
   }
 
+  /// Name check vaidation check
+  static String? nameValidation(String? value) {
+    final RegExp nameRegex = RegExp(r'^[a-zA-Z]+$');
+    if (value == null || value.trim().isEmpty) {
+      return 'Name is required';
+    } else if (!nameRegex.hasMatch(value.trim())) {
+      return 'Enter a valid name (letters only)';
+    }
+    return null;
+  }
 }

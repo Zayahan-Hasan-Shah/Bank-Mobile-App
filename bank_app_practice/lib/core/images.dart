@@ -10,4 +10,5 @@ class ImageAssets {
   static const String facebookImage = 'assets/images/facebook.png';
 
   static const String backArrowIcon = 'assets/icons/backArrow.png';
+  static const String uploadIcon = 'assets/icons/upload.png';
 }
