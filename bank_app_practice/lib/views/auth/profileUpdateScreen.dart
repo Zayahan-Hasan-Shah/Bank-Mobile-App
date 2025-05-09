@@ -52,23 +52,33 @@ class _ProfileUpdateScreenState extends State<ProfileUpdateScreen> {
   }
 
   @override
+  void dispose() {
+    super.dispose();
+    firstNameController.dispose();
+    lastNameController.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(title: profileTitle),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 30),
+        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 30),
         child: Form(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              buildProfileImagePicker(image: image, onTap: _pickImage),
-              SizedBox(height: 30),
-              _buildFirstNameField(),
-              SizedBox(height: 20),
-              _buildLastNameField(),
-              SizedBox(height: 60),
-              _setButton()
-            ],
+          key: formKey,
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                buildProfileImagePicker(image: image, onTap: _pickImage),
+                SizedBox(height: 30),
+                _buildFirstNameField(),
+                SizedBox(height: 20),
+                _buildLastNameField(),
+                SizedBox(height: 60),
+                _setButton()
+              ],
+            ),
           ),
         ),
       ),
@@ -92,22 +102,24 @@ class _ProfileUpdateScreenState extends State<ProfileUpdateScreen> {
     return Center(
       child: GestureDetector(
           onTap: onTap,
-          child: Column(
-            children: [
-              TitleText(
-                title: psuyp,
-                fontSize: 16,
-                color: ColorsPallete.black.withOpacity(0.4),
-              ),
-              SizedBox(height: 20),
-              CircleAvatar(
-                radius: radius,
-                backgroundColor: ColorsPallete.buttonColor,
-                backgroundImage: image != null ? FileImage(image) : null,
-                child:
-                    image == null ? Image.asset(ImageAssets.uploadIcon) : null,
-              ),
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                TitleText(
+                  title: psuyp,
+                  fontSize: 16,
+                  color: ColorsPallete.black.withOpacity(0.4),
+                ),
+                const SizedBox(height: 20,),
+                CircleAvatar(
+                  radius: radius,
+                  backgroundColor: ColorsPallete.buttonColor,
+                  backgroundImage: image != null ? FileImage(image) : null,
+                  child:
+                      image == null ? Image.asset(ImageAssets.uploadIcon) : null,
+                ),
+              ],
+            ),
           )),
     );
   }
@@ -166,7 +178,7 @@ class _ProfileUpdateScreenState extends State<ProfileUpdateScreen> {
           onTap: () {
             if (formKey.currentState!.validate()) {
               print("Form is valid. Proceed with profile update.");
-              pushNamed(AppRoutes.profileUpdateScreen);
+              pushNamed(AppRoutes.phoneNumberScreen);
             } else {
               print("Form is invalid. Show errors.");
             }
