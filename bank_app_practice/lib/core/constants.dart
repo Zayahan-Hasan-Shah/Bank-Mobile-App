@@ -1,5 +1,8 @@
 ////constants////
 
+/// hard coded pin code for temperory
+const safePin = '1234';
+
 ///app messages
 const invalidCredentialsMessage = 'The credentials provided are incorrect.';
 
