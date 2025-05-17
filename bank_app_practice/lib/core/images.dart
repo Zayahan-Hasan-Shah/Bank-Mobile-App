@@ -8,6 +8,7 @@ class ImageAssets {
   static const String bpmeImage = 'assets/images/bpme.png';
   static const String googleSignupImage = 'assets/images/google.png';
   static const String facebookImage = 'assets/images/facebook.png';
+  static const String visaCardImage = 'assets/images/visaCard.png';
 
   static const String backArrowIcon = 'assets/icons/backArrow.png';
   static const String uploadIcon = 'assets/icons/upload.png';

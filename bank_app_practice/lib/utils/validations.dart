@@ -1,3 +1,7 @@
+import 'package:bank_app_practice/navigation/navigationHelper.dart';
+import 'package:bank_app_practice/routes/appRoutes.dart';
+import 'package:flutter/material.dart';
+
 class AppValidations {
   /// Email validation check
   static String? emailValidation(String? value) {
@@ -43,6 +47,25 @@ class AppValidations {
       return 'Passwords do not match';
     }
     return null;
+  }
+
+  /// login check
+  static String? loginFunctionality(GlobalKey<FormState> formKey, String pin,
+      String safePin, BuildContext context) {
+    final isFormValid = formKey.currentState?.validate() ?? false;
+    if (pin == safePin) {
+      pushNamedReplace(AppRoutes.homeScreen);
+      return null;
+    }
+    if (isFormValid) {
+      pushNamedReplace(AppRoutes.homeScreen);
+      return null;
+    }
+    if (pin.isNotEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text("Invalid PIN")),
+      );
+    }
   }
 
   /// Name check vaidation check

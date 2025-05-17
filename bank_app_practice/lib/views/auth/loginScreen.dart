@@ -9,6 +9,7 @@ import 'package:bank_app_practice/utils/titleText.dart';
 import 'package:bank_app_practice/utils/validations.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:pin_code_fields/pin_code_fields.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -22,10 +23,18 @@ class _LoginScreenState extends State<LoginScreen> {
 
   final TextEditingController emailAddressController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  String _loginPin = '';
 
   final ValueNotifier<bool> obscurePassword = ValueNotifier<bool>(true);
 
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+
+  void _checkPin(String value) {
+    setState(() {
+      _loginPin = value;
+      if (_loginPin == safePin) {}
+    });
+  }
 
   @override
   void initState() {
@@ -68,6 +77,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   _buildHeader(),
                   _buildEmailField(),
                   _buildPasswordField(),
+                  _orLine(),
+                  const SizedBox(height: 20),
+                  _pinLogin(),
+                  const SizedBox(height: 20),
                   _signupButton(),
                   const SizedBox(height: 40),
                   _orLine(),
@@ -144,6 +157,47 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
+  Widget _pinLogin() {
+    return Column(
+      children: [
+        TitleText(title: lwpc),
+        const SizedBox(
+          height: 20,
+        ),
+        PinCodeTextField(
+          enableActiveFill: true,
+          appContext: context,
+          length: 5,
+          keyboardType: TextInputType.number,
+          cursorColor: ColorsPallete.iconColor,
+          obscureText: false,
+          textStyle: TextStyle(
+            fontSize: 22,
+            fontWeight: FontWeight.bold,
+            color: ColorsPallete.iconColor,
+          ),
+          pinTheme: PinTheme(
+            shape: PinCodeFieldShape.box,
+            borderRadius: BorderRadius.circular(12),
+            fieldHeight: 55,
+            fieldWidth: 55,
+            activeColor: ColorsPallete.iconColor,
+            inactiveColor: ColorsPallete.iconColor.withOpacity(0.6),
+            selectedColor: ColorsPallete.white,
+            activeFillColor: ColorsPallete.iconColor.withOpacity(0.1),
+            inactiveFillColor: ColorsPallete.iconColor.withOpacity(0.6),
+            selectedFillColor: ColorsPallete.iconColor.withOpacity(0.2),
+            borderWidth: 2,
+          ),
+          animationType: AnimationType.scale,
+          animationDuration: const Duration(milliseconds: 250),
+          onChanged: (value) => _loginPin = value,
+          onCompleted: _checkPin,
+        ),
+      ],
+    );
+  }
+
   Widget _signupButton() {
     return SizedBox(
       height: 30,
@@ -154,11 +208,7 @@ class _LoginScreenState extends State<LoginScreen> {
           borderRadiusButton: 20,
           alignmentButton: Alignment.center,
           onTap: () {
-            if (formKey.currentState!.validate()) {
-              print("Form is valid. Proceed with login.");
-            } else {
-              print("Form is invalid. Show errors.");
-            }
+            AppValidations.loginFunctionality(formKey, _loginPin, safePin, context);
           },
           child: TitleText(
             title: loginTitle,

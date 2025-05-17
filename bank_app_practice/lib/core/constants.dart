@@ -1,7 +1,7 @@
 ////constants////
 
 /// hard coded pin code for temperory
-const safePin = '1234';
+const safePin = '12345';
 
 ///app messages
 const invalidCredentialsMessage = 'The credentials provided are incorrect.';
@@ -55,3 +55,9 @@ const c = 'Confirm';
 const spc = 'Set Pin Code';
 const psyopc = 'Please set your own\nPin Code';
 const spcd = 'Set Pin Code(5-digit)';
+const lwpc = 'Login with Pin Code';
+
+
+/// home screen
+const cb = 'Current Balance';
+const balance = 'Rs 2,85,856.00';
