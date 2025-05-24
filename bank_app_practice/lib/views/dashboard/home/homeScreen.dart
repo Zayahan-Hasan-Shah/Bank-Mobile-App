@@ -5,6 +5,7 @@ import 'package:bank_app_practice/utils/customAppBar.dart';
 import 'package:bank_app_practice/utils/titleText.dart';
 import 'package:bank_app_practice/views/dashboard/home/widgets/currentBalance.dart';
 import 'package:bank_app_practice/views/dashboard/home/widgets/incomingTransaction.dart';
+import 'package:bank_app_practice/views/dashboard/home/widgets/outgoingTransaction.dart';
 import 'package:bank_app_practice/views/dashboard/home/widgets/recentTransactions.dart';
 import 'package:bank_app_practice/views/widgets/common/notificationWidget.dart';
 import 'package:bank_app_practice/views/widgets/common/sideBar.dart';
@@ -99,6 +100,57 @@ class _HomeScreenState extends State<HomeScreen> {
                       incomingTransactionPersonName: sanaMir,
                       incomingTransactionAmount: incomingTransactionMoney3,
                       incomingTransactionDate: incomingTransactionDate3,
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  TitleText(
+                      title: outgoingTransaction,
+                      fontSize: 18,
+                      color: ColorsPallete.black.withOpacity(0.6)),
+                  TextButton(
+                      onPressed: () {},
+                      child: TitleText(
+                          title: '$seeAll >',
+                          fontSize: 14,
+                          color: ColorsPallete.titleColor))
+                ],
+              ),
+              const SizedBox(height: 10),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Outgoingtransaction(
+                      outgoingTransactionPersonImage:
+                          ImageAssets.outgoingTransactionMale1,
+                      outgoingTransactionPersonName: kagisoRabada,
+                      outgoingTransactionAmount: outgoingtransactionMoney1,
+                      outgoingTransactionDate: outgoingTransactionDate1,
+                    ),
+                    const SizedBox(
+                      width: 20,
+                    ),
+                    Outgoingtransaction(
+                      outgoingTransactionPersonImage:
+                          ImageAssets.outgoingTransactionMale2,
+                      outgoingTransactionPersonName: kaneWilliamson,
+                      outgoingTransactionAmount: outgoingTransactionMoney2,
+                      outgoingTransactionDate: outgoingTransactionDate2,
+                    ),
+                    const SizedBox(
+                      width: 20,
+                    ),
+                    Outgoingtransaction(
+                      outgoingTransactionPersonImage:
+                          ImageAssets.outgoingTransactionWomen2,
+                      outgoingTransactionPersonName: anaDeArmas,
+                      outgoingTransactionAmount: outgoingTransactionMoney3,
+                      outgoingTransactionDate: outgoingTransactionDate3,
                     ),
                   ],
                 ),

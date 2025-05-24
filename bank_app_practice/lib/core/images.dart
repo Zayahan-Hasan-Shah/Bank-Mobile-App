@@ -14,10 +14,16 @@ class ImageAssets {
   static const String incomingTransactionMale2 = 'assets/images/male2.png';
   static const String incomingTransactionWomen1 = 'assets/images/women1.png';
 
+  static const String outgoingTransactionMale1 = 'assets/images/male4.png';
+  static const String outgoingTransactionMale2 = 'assets/images/male3.png';
+  static const String outgoingTransactionWomen2 = 'assets/images/women2.png';
+
 
   static const String backArrowIcon = 'assets/icons/backArrow.png';
   static const String uploadIcon = 'assets/icons/upload.png';
   static const String incomingTransactionArrow = 'assets/icons/incomingTransactionArrow.png';
+  static const String outgoingTransactionArrow = 'assets/icons/outgoingTransactionArrow.png';
 
   static const String homeScreenVector1 = 'assets/vectors/homeScreenVector1.png';
+  static const String homeScreenVector2 = 'assets/vectors/homeScreenVector2.png';
 }
