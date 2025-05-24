@@ -10,6 +10,14 @@ class ImageAssets {
   static const String facebookImage = 'assets/images/facebook.png';
   static const String visaCardImage = 'assets/images/visaCard.png';
 
+  static const String incomingTransactionMale1 = 'assets/images/male1.png';
+  static const String incomingTransactionMale2 = 'assets/images/male2.png';
+  static const String incomingTransactionWomen1 = 'assets/images/women1.png';
+
+
   static const String backArrowIcon = 'assets/icons/backArrow.png';
   static const String uploadIcon = 'assets/icons/upload.png';
+  static const String incomingTransactionArrow = 'assets/icons/incomingTransactionArrow.png';
+
+  static const String homeScreenVector1 = 'assets/vectors/homeScreenVector1.png';
 }

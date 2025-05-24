@@ -92,4 +92,13 @@ class AppValidations {
     }
     return 'Incorrect phone number';
   }
+
+  /// Spliting Person's name into two lines
+  String splitName(String fullName) {
+    List<String> parts = fullName.split(' ');
+    if (parts.length > 1) {
+      return '${parts.first}\n${parts.sublist(1).join(' ')}';
+    }
+    return fullName;
+  }
 }

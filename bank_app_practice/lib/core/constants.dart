@@ -61,3 +61,26 @@ const lwpc = 'Login with Pin Code';
 /// home screen
 const cb = 'Current Balance';
 const balance = 'Rs 2,85,856.00';
+const cardName = 'VISA';
+const cardType = 'Master Card';
+const transactionMoney = 'Rs 758964.10';
+const homeTitle = 'Home';
+const incomingTransaction = 'Incoming Transaction';
+const seeAll = 'See All';
+const f = 'From';
+
+
+/// incoming transaction person's names
+const johnnyBairstow = 'Johnny Bairstow';
+const johnsonCharles = 'Johnson Charles';
+const sanaMir = 'Sana Mir';
+
+/// incoming transactions money
+const incomingTransactionMoney1 = 'Rs.54,000';
+const incomingTransactionMoney2 = 'Rs.62,000';
+const incomingTransactionMoney3 = 'Rs.48,000';
+
+/// incoming transactions date
+const incomingTransactionDate1 = '23 April 2025';
+const incomingTransactionDate2 = '23 April 2025';
+const incomingTransactionDate3 = '23 April 2025';

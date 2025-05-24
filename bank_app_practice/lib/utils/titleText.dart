@@ -9,6 +9,8 @@ class TitleText extends StatelessWidget {
   final FontWeight? weight;
   final Color? color;
   final TextAlign? textAlign;
+  final int? maxLines;
+  final bool? softWrap;
 
   TitleText({
     Key? key,
@@ -18,6 +20,8 @@ class TitleText extends StatelessWidget {
     this.weight,
     this.color,
     this.textAlign,
+    this.maxLines,
+    this.softWrap
   }) : super(key: key);
 
   @override
@@ -25,6 +29,8 @@ class TitleText extends StatelessWidget {
     return Text(
       title,
       textAlign: textAlign,
+      maxLines: maxLines ?? null,
+      softWrap: softWrap ?? true,
       style: style ??
           GoogleFonts.roboto(
             fontSize: fontSize ?? 14,

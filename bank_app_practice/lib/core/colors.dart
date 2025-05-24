@@ -10,4 +10,5 @@ class ColorsPallete {
   static const errorColor = Color.fromRGBO(255,44,44,1);
   static const dividerColor = Color(0xB1B1B1);
   static const googleSignupBgColor = Color(0xEEEEEE);
+  static const incomingTransactionColor = Color(0xFF8EDFEB);
 }
