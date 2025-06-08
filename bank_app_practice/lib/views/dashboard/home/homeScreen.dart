@@ -6,7 +6,7 @@ import 'package:bank_app_practice/utils/titleText.dart';
 import 'package:bank_app_practice/views/dashboard/home/widgets/currentBalance.dart';
 import 'package:bank_app_practice/views/dashboard/home/widgets/incomingTransaction.dart';
 import 'package:bank_app_practice/views/dashboard/home/widgets/outgoingTransaction.dart';
-import 'package:bank_app_practice/views/dashboard/home/widgets/recentTransactions.dart';
+import 'package:bank_app_practice/views/widgets/common/recentTransactions.dart';
 import 'package:bank_app_practice/views/widgets/common/notificationWidget.dart';
 import 'package:bank_app_practice/views/widgets/common/sideBar.dart';
 import 'package:flutter/material.dart';

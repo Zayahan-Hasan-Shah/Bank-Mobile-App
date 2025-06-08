@@ -101,3 +101,7 @@ const outgoingTransactionMoney3 = 'Rs.56,600';
 const outgoingTransactionDate1 = '04 May 2025';
 const outgoingTransactionDate2 = '04 May 2025';
 const outgoingTransactionDate3 = '04 May 2025';
+
+
+/// card details screen
+const cardDetails = 'Card Details';
