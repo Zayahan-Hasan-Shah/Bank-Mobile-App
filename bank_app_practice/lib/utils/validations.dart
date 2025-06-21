@@ -54,11 +54,11 @@ class AppValidations {
       String safePin, BuildContext context) {
     final isFormValid = formKey.currentState?.validate() ?? false;
     if (pin == safePin) {
-      pushNamedReplace(AppRoutes.homeScreen);
+      pushNamedReplace(AppRoutes.bottomNavigation);
       return null;
     }
     if (isFormValid) {
-      pushNamedReplace(AppRoutes.homeScreen);
+      pushNamedReplace(AppRoutes.bottomNavigation);
       return null;
     }
     if (pin.isNotEmpty) {

@@ -3,6 +3,7 @@ import 'package:bank_app_practice/views/auth/phoneNumbrtScreen.dart';
 import 'package:bank_app_practice/views/auth/profileUpdateScreen.dart';
 import 'package:bank_app_practice/views/auth/setPinCode.dart';
 import 'package:bank_app_practice/views/auth/signupScreen.dart';
+import 'package:bank_app_practice/views/dashboard/bottomNavigation/bottomNavigationMain.dart';
 import 'package:bank_app_practice/views/dashboard/home/homeScreen.dart';
 import 'package:bank_app_practice/views/onBoarding/onBoarding.dart';
 import 'package:bank_app_practice/views/onBoarding/welcome.dart';
@@ -20,6 +21,7 @@ class AppRoutes {
   static const phoneNumberScreen = '/phonenumberscreen';
   static const setPinCodeScreen = '/setpincodescreen';
   static const homeScreen = '/homescreen';
+  static const bottomNavigation = '/bottomnavigation';
 
   static Map<String, Widget Function(BuildContext _)> routes = {
     mainRoute : (_) => const SplashScreen(),
@@ -31,5 +33,6 @@ class AppRoutes {
     phoneNumberScreen : (_) => PhoneNumberScreen(),
     setPinCodeScreen : (_) => PinCodeScreen(),
     homeScreen : (_) => HomeScreen(),
+    bottomNavigation : (_) => BottomNavigaationMain()
   };
 }
