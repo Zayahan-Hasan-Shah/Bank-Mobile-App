@@ -17,9 +17,17 @@ class BottomNavigaationMain extends ConsumerWidget {
       CardDetails(),
     ];
 
-    return Scaffold(
-      body: screens[currentIndex],
-      bottomNavigationBar: BottomNavBar(),
+    return Stack(
+      children: [
+        Scaffold(
+          body: screens[currentIndex],
+          backgroundColor: Color(0xFFF9F7FB),
+        ),
+        Align(
+          alignment: Alignment.bottomCenter,
+          child: BottomNavBar(),
+        ),
+      ],
     );
   }
 }

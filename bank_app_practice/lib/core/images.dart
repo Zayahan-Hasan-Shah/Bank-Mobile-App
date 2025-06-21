@@ -23,6 +23,15 @@ class ImageAssets {
   static const String uploadIcon = 'assets/icons/upload.png';
   static const String incomingTransactionArrow = 'assets/icons/incomingTransactionArrow.png';
   static const String outgoingTransactionArrow = 'assets/icons/outgoingTransactionArrow.png';
+  
+  static const String homeInActive = 'assets/icons/homeInActive.png';
+  static const String homeActive = 'assets/icons/homeActive.png';
+  static const String chartInActive = 'assets/icons/chartInActive.png';
+  static const String chartActive = 'assets/icons/chartActive.png';
+  static const String profileInActive = 'assets/icons/profileInActive.png';
+  static const String profileActive = 'assets/icons/profileActive.png';
+  static const String walletInActive = 'assets/icons/walletInActive.png';
+  static const String walletActive = 'assets/icons/walletActive.png';
 
   static const String homeScreenVector1 = 'assets/vectors/homeScreenVector1.png';
   static const String homeScreenVector2 = 'assets/vectors/homeScreenVector2.png';
