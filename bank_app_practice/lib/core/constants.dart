@@ -105,3 +105,21 @@ const outgoingTransactionDate3 = '04 May 2025';
 
 /// card details screen
 const cardDetails = 'Card Details';
+
+/// currency name
+const currency1 = 'USD';
+const currency2 = 'PKR';
+const currency3 = 'EURO';
+const currency4 = 'INR';
+
+/// currenct current rate
+const currRate1 = 280;
+const currRate2 = 240;
+const currRate3 = 360;
+const currRate4 = 260;
+
+/// currenct current rate
+const prevRate1 = 270;
+const prevRate2 = 220;
+const prevRate3 = 380;
+const pervRate4 = 220;

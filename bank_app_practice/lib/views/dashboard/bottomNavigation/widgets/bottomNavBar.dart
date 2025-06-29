@@ -26,8 +26,8 @@ class BottomNavBar extends ConsumerWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          _buildNavItem(context, ref, 0, ImageAssets.homeInActive,
-              ImageAssets.homeActive, currentIndex == 0),
+          _buildNavItem(context, ref, 0, ImageAssets.homeActive,
+              ImageAssets.homeInActive, currentIndex == 0),
           _buildNavItem(context, ref, 1, ImageAssets.walletActive,
               ImageAssets.walletInActive, currentIndex == 1),
           // _buildNavItem(context, ref, 2, ImageAssets.chartInActive,

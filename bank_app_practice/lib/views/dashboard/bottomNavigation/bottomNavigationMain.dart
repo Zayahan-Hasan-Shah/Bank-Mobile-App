@@ -25,6 +25,7 @@ class BottomNavigaationMain extends ConsumerWidget {
         ),
         Align(
           alignment: Alignment.bottomCenter,
+          heightFactor: 8,
           child: BottomNavBar(),
         ),
       ],
