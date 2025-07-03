@@ -123,3 +123,8 @@ const prevRate1 = 270;
 const prevRate2 = 220;
 const prevRate3 = 380;
 const pervRate4 = 220;
+
+// add card buttom
+const ac = 'Add Card';
+
+const cashBacks = 'Cash Backs';

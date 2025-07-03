@@ -22,7 +22,7 @@ class CurrencyRate extends StatelessWidget {
     final double difference =
         currPercent > prevPercent ? currPercent : prevPercent;
     return Container(
-      padding: const EdgeInsets.all(8),
+      padding: const EdgeInsets.all(4),
       width: 100,
       decoration: BoxDecoration(
         color: currencyCurrentRate > currencyPrevRate
@@ -35,11 +35,12 @@ class CurrencyRate extends StatelessWidget {
         children: [
           TitleText(
             title: currencyName,
-            fontSize: 14,
+            fontSize: 16,
             color: ColorsPallete.white,
           ),
           const SizedBox(width: 20),
           Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Image.asset(
                 currencyCurrentRate > currencyPrevRate
@@ -53,7 +54,7 @@ class CurrencyRate extends StatelessWidget {
                 title: difference.toString(),
                 fontSize: 14,
                 color: ColorsPallete.white,
-              )
+              ),
             ],
           )
         ],

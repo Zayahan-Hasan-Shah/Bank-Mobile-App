@@ -35,4 +35,7 @@ class ImageAssets {
 
   static const String homeScreenVector1 = 'assets/vectors/homeScreenVector1.png';
   static const String homeScreenVector2 = 'assets/vectors/homeScreenVector2.png';
+
+  static const String cashBackFemale1 = 'assets/images/female1.png';
+
 }
