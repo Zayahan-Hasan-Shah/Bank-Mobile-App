@@ -6,6 +6,7 @@ import 'package:bank_app_practice/utils/customButton.dart';
 import 'package:bank_app_practice/utils/titleText.dart';
 import 'package:bank_app_practice/views/dashboard/cardDetails/widgets/cashBacksWidget.dart';
 import 'package:bank_app_practice/views/dashboard/cardDetails/widgets/currencyRate.dart';
+import 'package:bank_app_practice/views/widgets/common/notificationWidget.dart';
 import 'package:bank_app_practice/views/widgets/common/recentTransactions.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -23,7 +24,18 @@ class _CardDetailsState extends State<CardDetails> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ColorsPallete.backgroundColor,
-      appBar: CustomAppBar(title: cardDetails),
+      appBar: CustomAppBar(
+        title: cardDetails,
+        backButtonWidget: Builder(
+          builder: (context) => IconButton(
+            icon: Icon(Icons.menu),
+            onPressed: () => Scaffold.of(context).openDrawer(),
+          ),
+        ),
+        actionWidget: NotificationWidget(
+          onTap: () {},
+        ),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: SingleChildScrollView(
@@ -65,7 +77,7 @@ class _CardDetailsState extends State<CardDetails> {
                           color: ColorsPallete.titleColor))
                 ],
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
               _cashBacksminorList(),
             ],
           ),
@@ -132,30 +144,6 @@ class _CardDetailsState extends State<CardDetails> {
   Widget _cashBacksminorList() {
     return Column(
       children: [
-        CashBacksWidget(
-            icon: ImageAssets.incomingTransactionArrow,
-            image: ImageAssets.cashBackFemale1,
-            title: 'Entertainment',
-            time: formatedTime,
-            money: 4.67,
-            cashBackArrow: ImageAssets.incomingTransactionArrow),
-        const SizedBox(height: 10),
-        CashBacksWidget(
-            icon: ImageAssets.incomingTransactionArrow,
-            image: ImageAssets.cashBackFemale1,
-            title: 'Entertainment',
-            time: formatedTime,
-            money: 4.67,
-            cashBackArrow: ImageAssets.incomingTransactionArrow),
-        const SizedBox(height: 10),
-        CashBacksWidget(
-            icon: ImageAssets.incomingTransactionArrow,
-            image: ImageAssets.cashBackFemale1,
-            title: 'Entertainment',
-            time: formatedTime,
-            money: 4.67,
-            cashBackArrow: ImageAssets.incomingTransactionArrow),
-        const SizedBox(height: 10),
         CashBacksWidget(
             icon: ImageAssets.incomingTransactionArrow,
             image: ImageAssets.cashBackFemale1,

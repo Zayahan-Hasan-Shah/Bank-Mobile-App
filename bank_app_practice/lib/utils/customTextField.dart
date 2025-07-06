@@ -7,6 +7,10 @@ class CustomTextField extends StatelessWidget {
   final String? Function(String?)? validator;
   final Widget? suffixIcon;
   final TextInputType? keyboardType;
+  final String? hintText;
+  final bool isUnderLine;
+  final Color? hintColor;
+  final double? fontSize;
 
   const CustomTextField({
     Key? key,
@@ -15,7 +19,11 @@ class CustomTextField extends StatelessWidget {
     this.toggle,
     this.validator,
     this.suffixIcon,
-    this.keyboardType
+    this.keyboardType,
+    this.hintText,
+    this.isUnderLine = true,
+    this.hintColor,
+    this.fontSize,
   }) : super(key: key);
 
   @override
@@ -26,14 +34,22 @@ class CustomTextField extends StatelessWidget {
       obscureText: obsText,
       validator: validator,
       decoration: InputDecoration(
-        border: const UnderlineInputBorder(
-          borderSide: BorderSide(color: Colors.grey),
+        hintText: hintText,
+        hintStyle: TextStyle(color: hintColor, fontSize: fontSize),
+        border: UnderlineInputBorder(
+          borderSide: isUnderLine
+              ? BorderSide(color: Colors.grey)
+              : BorderSide(color: Colors.transparent),
         ),
-        enabledBorder: const UnderlineInputBorder(
-          borderSide: BorderSide(color: Colors.grey),
+        enabledBorder: UnderlineInputBorder(
+          borderSide: isUnderLine
+              ? BorderSide(color: Colors.grey)
+              : BorderSide(color: Colors.transparent),
         ),
-        focusedBorder: const UnderlineInputBorder(
-          borderSide: BorderSide(color: Colors.grey),
+        focusedBorder: UnderlineInputBorder(
+          borderSide: isUnderLine
+              ? BorderSide(color: Colors.grey)
+              : BorderSide(color: Colors.transparent),
         ),
         suffixIcon: suffixIcon ??
             (toggle != null

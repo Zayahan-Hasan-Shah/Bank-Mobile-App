@@ -1,4 +1,5 @@
 import 'package:bank_app_practice/controllers/BottomNavigationController/bottomNavigationController.dart';
+import 'package:bank_app_practice/views/dashboard/activity/activityScreen.dart';
 import 'package:bank_app_practice/views/dashboard/bottomNavigation/widgets/bottomNavBar.dart';
 import 'package:bank_app_practice/views/dashboard/cardDetails/cardDetails.dart';
 import 'package:bank_app_practice/views/dashboard/home/homeScreen.dart';
@@ -15,6 +16,7 @@ class BottomNavigaationMain extends ConsumerWidget {
     final screens = [
       HomeScreen(),
       CardDetails(),
+      ActivityScreen()
     ];
 
     return Stack(
