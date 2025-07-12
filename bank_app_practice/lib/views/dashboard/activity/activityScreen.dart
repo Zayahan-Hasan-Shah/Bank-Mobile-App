@@ -2,6 +2,8 @@ import 'package:bank_app_practice/core/colors.dart';
 import 'package:bank_app_practice/core/constants.dart';
 import 'package:bank_app_practice/utils/customAppBar.dart';
 import 'package:bank_app_practice/utils/customTextField.dart';
+import 'package:bank_app_practice/utils/titleText.dart';
+import 'package:bank_app_practice/views/dashboard/activity/widgets/overallIncomingChart.dart';
 import 'package:bank_app_practice/views/widgets/common/notificationWidget.dart';
 import 'package:flutter/material.dart';
 
@@ -40,7 +42,26 @@ class _ActivityScreenState extends State<ActivityScreen> {
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 20),
         child: Column(
-          children: [searchField()],
+          children: [
+            searchField(),
+            const SizedBox(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                TitleText(
+                    title: overAllIncoming,
+                    fontSize: 18,
+                    color: ColorsPallete.black.withOpacity(0.6)),
+                TextButton(
+                    onPressed: () {},
+                    child: TitleText(
+                        title: '$seeAll >',
+                        fontSize: 14,
+                        color: ColorsPallete.titleColor))
+              ],
+            ),
+            OverAllIncomingChart()
+          ],
         ),
       ),
     );

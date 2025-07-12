@@ -60,7 +60,7 @@ class _OnBoarding extends ConsumerState<OnBoarding> {
             const SizedBox(height: 30),
             CustomButton(
               onTap: () {
-                pushNamedReplace(AppRoutes.signupScreen);
+                pushNamedRemoveAll(AppRoutes.signupScreen);
               },
               title: skip,
             )

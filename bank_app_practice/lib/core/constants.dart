@@ -132,3 +132,5 @@ const cashBacks = 'Cash Backs';
 /// Activity screen
 const activityTitle = 'Activity';
 const search = 'Search';
+const overAllIncoming = 'Overall Incoming';
+const overAllOutgoing = 'Overall Outgoing';

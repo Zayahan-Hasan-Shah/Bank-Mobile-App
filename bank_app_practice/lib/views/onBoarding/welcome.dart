@@ -54,7 +54,7 @@ class _Welcome extends ConsumerState<Welcome> {
             const SizedBox(height: 20),
             CustomButton(
               onTap: () {
-                pushNamed(AppRoutes.onBoardingScreen);
+                pushNamedRemoveAll(AppRoutes.onBoardingScreen);
               },
               child: TitleText(
                 title: 'Get Started',

@@ -38,4 +38,7 @@ class ImageAssets {
 
   static const String cashBackFemale1 = 'assets/images/female1.png';
 
+  static const String overAllIncomingChart = 'assets/icons/overallIncomingChart.png';
+  static const String overAllOutgoingChart = 'assets/icons/overallOutgoingChart.png';
+
 }
