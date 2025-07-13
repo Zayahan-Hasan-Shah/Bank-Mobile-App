@@ -14,4 +14,5 @@ class ColorsPallete {
   static const transparentColor = Colors.transparent;
   static const activeIconColor = Color.fromRGBO(81, 100, 191, 1);
   static const banksCardBackgroundColor = Color.fromRGBO(247, 245, 245, 1);
+  static const overAllIncomingTransactionChartColor = Color(0xFF8BD9E9);
 }

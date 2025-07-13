@@ -11,9 +11,22 @@ class OverAllIncomingChart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.25),
+            blurRadius: 10,
+            offset: Offset(2, 6),
+            blurStyle: BlurStyle.outer,
+            spreadRadius: 4,
+          ),
+        ],
+      ),
       child: Column(
         children: [
           Container(
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 14),
               child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -40,7 +53,7 @@ class OverAllIncomingChart extends StatelessWidget {
               )
             ],
           )),
-          OverAllIncomingTransactionLineChart(data : data),
+          OverAllIncomingTransactionLineChart(data: data),
         ],
       ),
     );
