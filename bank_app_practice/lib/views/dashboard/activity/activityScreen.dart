@@ -1,9 +1,10 @@
 import 'package:bank_app_practice/core/colors.dart';
 import 'package:bank_app_practice/core/constants.dart';
+import 'package:bank_app_practice/dummyData/activity/incomingActivityData.dart';
 import 'package:bank_app_practice/utils/customAppBar.dart';
 import 'package:bank_app_practice/utils/customTextField.dart';
 import 'package:bank_app_practice/utils/titleText.dart';
-import 'package:bank_app_practice/views/dashboard/activity/widgets/overallIncomingChart.dart';
+import 'package:bank_app_practice/views/dashboard/activity/widgets/overallIncomingChartWidget.dart';
 import 'package:bank_app_practice/views/widgets/common/notificationWidget.dart';
 import 'package:flutter/material.dart';
 
@@ -16,6 +17,7 @@ class ActivityScreen extends StatefulWidget {
 
 class _ActivityScreenState extends State<ActivityScreen> {
   final TextEditingController searchController = TextEditingController();
+  final List<Map<String, dynamic>> data = transactionData;
 
   @override
   void dispose() {
@@ -60,7 +62,7 @@ class _ActivityScreenState extends State<ActivityScreen> {
                         color: ColorsPallete.titleColor))
               ],
             ),
-            OverAllIncomingChart()
+            OverAllIncomingChart(data: data),
           ],
         ),
       ),
